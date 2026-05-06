@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Repetir Palavra</h2>
+
+<form onsubmit="this.action='/repetir/' + palavra.value + '/' + vezes.value">
+    <input type="text" name="palavra" placeholder="Palavra" required>
+    <input type="number" name="vezes" placeholder="Quantidade" required>
+    <button type="submit">Enviar</button>
+</form>
+</body>
+</html>
