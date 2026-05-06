@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{ title }} - Teste</title>
 </head>
-<body>
-    <h1 style="color: red;">Olá, mundo/</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti beatae omnis sunt et! Dicta libero atque molestiae porro non. Temporibus voluptate voluptatem commodi voluptas doloremque tempora ratione accusamus facere facilis!</p>
+<body style="background-color: rgb(255, 231, 235);">
 
-    <a href="{{url_for('contato')}}">Página de contato</a>
+    <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  color: rgb(89, 20, 32);"> 
+        Olá, mundo! 
+    </h1>
+
+    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> 
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, distinctio ab fugiat molestiae omnis, possimus, expedita doloremque sed rerum maiores tempora quod! Soluta explicabo nihil ratione molestiae laboriosam doloremque facilis! 
+    </p>
+
+    <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(89, 20, 32);">
+        Hello, {{ nome }}!
+    </h1>
+
+    <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(89, 20, 32);">
+        g
+    </h2>
+
+    <a href="{{url_for('contato')}}" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        Página contato
+    </a>
+
 </body>
 </html>
