@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleTechFuture.css">
+
+    <title>
+        {% block titulo %}
+        TechFuture
+        {% endblock %}
+    </title>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #ffffff;
+    color: #0B1F33;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header{
+    background: linear-gradient(90deg, #06141F, #12395B);
+    color: white;
+    padding: 15px 30px;
+
+    box-shadow: 0px 4px 15px rgba(0, 191, 255, 0.2);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #59F3FF;
+}
+
+/* MENU */
+.menu a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.menu a:hover{
+    color: #59F3FF;
+    text-shadow: 0px 0px 8px #59F3FF;
+}
+
+/* MAIN */
+main{
+    flex: 1;
+    padding: 40px;
+}
+
+/* CARD */
+.card{
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+
+    border: 1px solid rgba(0,191,255,0.2);
+
+    box-shadow:
+        0px 0px 15px rgba(0,191,255,0.08),
+        0px 4px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+
+    box-shadow:
+        0px 0px 20px rgba(89,243,255,0.2),
+        0px 8px 25px rgba(0,0,0,0.12);
+}
+
+.card h1{
+    margin-bottom: 15px;
+    color: #12395B;
+}
+
+.card p{
+    line-height: 1.7;
+    color: #334;
+}
+
+/* FOOTER */
+footer{
+    background: linear-gradient(90deg, #06141F, #12395B);
+    color: white;
+
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+
+    box-shadow: 0px -4px 15px rgba(0, 191, 255, 0.15);
+}
+    </style>
+
+</head>
+<body>
+     <!-- NAVBAR -->
+     <header>
+        <div class="navbar">
+
+            <div class="logo">
+                TechFuture
+            </div>
+
+            <div class="menu">
+                <a href="">Página Inicial</a>
+                <a href="/curso">Cursos</a>
+                <a href="/professores">Professores</a>
+                <a href="/contato">Contato</a>
+            </div>
+
+        </div>
+     </header>  
+
+     <main>
+        {% block conteudo %}
+        {% endblock %}
+     </main>
+
+     <footer>
+        <p>
+            2026 - Todos os direitos são reservados
+        </p>
+
+        <p>
+            Desenvolvido com Flask + Templates
+        </p>
+     </footer>
+</body>
+</html>
