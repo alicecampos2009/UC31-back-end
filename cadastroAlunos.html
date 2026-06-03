@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Prático - Cadastro Completo para Alunos</title>
+    <style>
+       *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #f0ebf8;
+    padding: 40px;
+}
+
+h1{
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    border-top: 10px solid #673ab7;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: normal;
+    color: #202124;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form{
+    width: 70%;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+label{
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #202124;
+}
+
+input{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #dadce0;
+    outline: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+input:focus{
+    border-bottom: 2px solid #673ab7;
+}
+
+button{
+    margin-top: 35px;
+    background-color: #673ab7;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+button:hover{
+    background-color: #5b33a6;
+}
+
+br{
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <h1>CADASTRO PARA ALUNOS DO MÉDIO TEC - CURSO DE PROGRAMAÇÃO</h1>
+
+    <form action="/cadastro" method="post">
+
+        <div class="pergunta">
+        <label for="name">Nome Completo:</label>
+        <input type="text" id="nome" name="nome"> <br>
+        </div>
+
+        <div class="pergunta">
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email"> <br>
+        </div>
+
+        <div class="pergunta">
+        <label for="telefone">Telefone:</label>
+        <input type="number" id="telefone" name="telefone"> <br>
+        </div>
+
+        <div class="pergunta">
+        <label for="cpf">CPF:</label>
+        <input type="number" id="cpf" name="cpf"> <br>
+        </div>
+
+        <div class="pergunta">
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade"> <br>
+        </div>
+
+        <div class="pergunta">
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade"> <br>
+        </div>
+
+        <div class="pergunta">
+        <label for="senha">Senha:</label>
+        <input type="text, number" id="senha" name="senha"> <br>
+        </div>
+        
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
