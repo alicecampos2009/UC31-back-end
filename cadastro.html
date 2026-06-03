@@ -6,14 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Cadastro do Usuário</h2>
-    
-    <form method="POST">
-        <label>Nome: </label> <br>
-        <input type="text" name="nome"> <br><br>
+    <h1>Formulário de Cadastro</h1>
+    <form action="/validacao" method="post">
+
+        <label for="name">Nome:</label><br>
+        <input type="text" id="nome" name="nome"><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+
+        <label for="cidade">Cidade:</label><br>
+        <input type="text" id="cidade" name="cidade"><br><br>
+
         <button type="submit">Cadastrar</button>
     </form>
-
-    <p>{{ mensagem }}</p>
 </body>
 </html>
