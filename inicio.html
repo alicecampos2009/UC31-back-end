@@ -1,26 +1,44 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferências do Usuário</title> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="tema-{{ tema }}">
+    <div class="card">
 
-{% block titulo %}
-Página inicial 
-{% endblock %}
+        {% if nome %} 
+            <h2>Olá, {{ nome }} </h2> 
+            <p>Email: {{ email }} </p> 
+        {% else %} 
+            <h2>Seja bem-vindo!</h2> 
+        {% endif %}
 
-{% block conteudo}
+        <h1>Cookies no Flask</h1>
 
-<div class="card">
+        <form action="{{ url_for('salvar') }}" method="POST">
 
-    <h1>Bem-vindo ao Sistema</h1>
+            <label>Nome Completo: </label>
+            <input type="text" name="nome"> <br>
 
-    <p>
-        Esse site utiliza:
-    </p>
+            <label>E-mail: </label>
+            <input type="text" name="email"> <br>
 
-    <ul>
-        <li>Navbar reutilizável</li>
-        <li>Rodapé reutilizável</li>
-        <li>Herança com extends</li>
-        <li>Blocos com bloc</li>
-    </ul>
+            <button type="submit">Salvar</button>
+        </form>
 
-</div>
+        <h2>Tema Atual: {{ tema }}</h2>
 
-{% endblock %} 
+        <div class="botoes">
+            <a href="{{ url_for('trocar_tema', escolha='claro') }}">
+                Tema Claro
+            </a>
+            <a href="{{ url_for('trocar_tema', escolha='escuro') }}">
+                Tema Escuro
+            </a>
+        </div>
+    </div>
+</body>
+</html> 
