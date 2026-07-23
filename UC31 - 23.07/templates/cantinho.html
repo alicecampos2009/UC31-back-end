@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cantinho Secreto</title>
+</head>
+<body>
+
+<h1>Olá, {{ nome }}! Este é o seu cantinho secreto.</h1>
+
+<p><strong>Cor favorita:</strong> {{ cor }}</p>
+
+<p><strong>Linguagem de programação favorita:</strong> {{ linguagem }}</p>
+
+<p><strong>Frase que me representa:</strong> {{ frase }}</p>
+
+<br>
+
+<a href="{{ url_for('painel') }}">← Voltar ao painel</a>
+
+</body>
+</html>
